@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FFFBF5" />
+    <title>DealNest — Discover Your Next Best Deal</title>
+    <meta
+      name="description"
+      content="Explore curated shopping offers and discover promotions worth checking out on Shopee and TikTok Shop."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DealNest — Discover Your Next Best Deal" />
+    <meta
+      property="og:description"
+      content="Explore curated shopping offers and discover promotions worth checking out."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="nav-wrap">
+      <nav class="nav glass" aria-label="Main">
+        <a href="#top" class="brand" data-scroll>
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1.5a1.5 1.5 0 0 0 0 3V15a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1.5a1.5 1.5 0 0 0 0-3z"/><path d="M13 7v10" stroke-dasharray="2 2.5"/></svg>
+          </span>
+          <span id="brandName">DealNest</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#featured" data-scroll>Featured</a></li>
+          <li><a href="#shopee" data-scroll>Shopee</a></li>
+          <li><a href="#tiktok" data-scroll>TikTok Shop</a></li>
+        </ul>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+    </header>
+
+    <section class="hero" id="top">
+      <span class="blob b1" aria-hidden="true"></span>
+      <span class="blob b2" aria-hidden="true"></span>
+      <span class="blob b3" aria-hidden="true"></span>
+      <div class="hero-inner">
+        <h1>Discover Your Next <span class="accent">Best Deal.</span></h1>
+        <p class="sub">Explore curated shopping offers and discover promotions worth checking out.</p>
+        <form class="search glass" role="search" id="searchForm">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="search" type="search" placeholder="Search vouchers…" aria-label="Search vouchers" autocomplete="off" />
+          <button type="button" id="clear" class="clear" aria-label="Clear search" hidden>×</button>
+        </form>
+      </div>
+    </section>
+
+    <main id="main">
+      <p id="empty" class="empty wrap" hidden></p>
+
+      <section id="featured" class="section wrap" hidden>
+        <div class="reveal"><h2>Featured vouchers</h2><p class="muted">Hand-picked offers worth a look.</p></div>
+        <div class="grid" id="gridFeatured"></div>
+      </section>
+
+      <section id="shopee" class="section wrap">
+        <div class="reveal"><h2>Shopee vouchers</h2><p class="muted">Offers for Shopee shoppers.</p></div>
+        <div class="grid" id="gridShopee"></div>
+      </section>
+
+      <section id="tiktok" class="section wrap">
+        <div class="reveal"><h2>TikTok Shop vouchers</h2><p class="muted">Offers for TikTok Shop shoppers.</p></div>
+        <div class="grid" id="gridTiktok"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <p class="foot-brand" id="footName">DealNest</p>
+        <p class="muted small">
+          An independent showcase of shopping offers. We are not affiliated with, endorsed by, or sponsored by
+          Shopee or TikTok Shop. Each button opens the exact page chosen by the site owner. Offers, terms and
+          availability are set by the platforms and may change at any time.
+        </p>
+        <p class="tiny" id="year"></p>
+      </div>
+    </footer>
+
+    <noscript><p style="text-align:center;padding:2rem">This page needs JavaScript to show vouchers.</p></noscript>
+    <script src="vouchers.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
